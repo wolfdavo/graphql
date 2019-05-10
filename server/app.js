@@ -12,7 +12,7 @@ mongoose.connection.once('open', () => {
 //this is saying 'we got a hit on the /graphql endpoint, i dont know what to do with it so im gonna give it to graphqlHTTP which is a function that handles gql requests.'
 //it takes an argument of an object
 app.use('/graphql', graphqlHTTP({
-    schema,
+    schema: schema,
     graphiql: true
 }));
 
