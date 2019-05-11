@@ -3,6 +3,9 @@ const graphqlHTTP = require('express-graphql'); //Express doesnt know what to do
 const schema = require('./schema/schema');
 const app = express(); //making an express app(server)
 const mongoose = require('mongoose');
+const cors = require('cors')
+//allow cross origin requests
+app.use(cors());
 
 mongoose.connect('mongodb+srv://learning:graphql@learning-graphql-5ewmn.gcp.mongodb.net/test?retryWrites=true', { useNewUrlParser: true });
 
